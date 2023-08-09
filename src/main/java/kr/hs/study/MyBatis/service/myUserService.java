@@ -10,4 +10,11 @@ public interface myUserService {
 
     //select
     public List<myUserDTO> select();
+
+    //delete
+    public void delete(String id);
+
+    // update
+    public void update(myUserDTO dto);
+    public myUserDTO read(String id);
 }

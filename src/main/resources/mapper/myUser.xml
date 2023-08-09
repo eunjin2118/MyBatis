@@ -13,4 +13,15 @@
         select * from myuser
     </select>
 <!--    insert into myuser (id, name) values-->
+    <delete id="delete" parameterType="kr.hs.study.MyBatis.dto.myUserDTO" >
+        delete from myuser where name = (#{id})
+    </delete>
+
+    <update id="update" parameterType="kr.hs.study.MyBatis.dto.myUserDTO">
+        update myuser set name = (#id), id = (#name)
+    </update>
+
+    <select id="read" resultType="kr.hs.study.MyBatis.dto.myUserDTO">
+        select * from myuser where id = #name
+    </select>
 </mapper>

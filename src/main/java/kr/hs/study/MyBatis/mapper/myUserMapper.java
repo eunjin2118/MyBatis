@@ -11,4 +11,10 @@ public interface myUserMapper {
     public void insert(myUserDTO dto);
 
     public List<myUserDTO> select();
+
+    public void delete(String id);
+
+    public void update(myUserDTO dto);
+
+    public myUserDTO read(String id);
 }

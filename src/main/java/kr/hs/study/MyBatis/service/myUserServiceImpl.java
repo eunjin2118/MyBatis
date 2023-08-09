@@ -21,4 +21,20 @@ public class myUserServiceImpl implements myUserService{
     public List<myUserDTO> select() {
         return mapper.select();
     }
+
+    @Override
+    public void delete(String id) {
+        mapper.delete(id);
+    }
+
+    @Override
+    public void update(myUserDTO dto) {
+        mapper.update(dto);
+    }
+
+    @Override
+    public myUserDTO read(String id) {
+        myUserDTO dto = mapper.read(id);
+        return dto;
+    }
 }
