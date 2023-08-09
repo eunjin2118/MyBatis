@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org/DTO Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="kr.hs.study.MyBatis.mapper.myUserMapper">
+    <!--parameter타입 : @Mapper가 있는 파일위치 패키지명-->
+    <insert id="insert" parameterType="kr.hs.study.MyBatis.dto.myUserDTO" >
+        insert into myuser (id, name) values(#{id}, #{name})
+    </insert>
+    <!--result 타입-->
+    <select id="select" resultType="kr.hs.study.MyBatis.dto.myUserDTO">
+        select * from myuser
+    </select>
+<!--    insert into myuser (id, name) values-->
+</mapper>
