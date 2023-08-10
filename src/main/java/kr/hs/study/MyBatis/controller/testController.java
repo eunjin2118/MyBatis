@@ -46,7 +46,7 @@ public class testController {
         model.addAttribute("dto", dto);
         return "read";
     }
-    @GetMapping("/update")
+    @PostMapping("/update")
     public String update(myUserDTO dto) {
         service.update(dto);
         return "redirect:/list";
